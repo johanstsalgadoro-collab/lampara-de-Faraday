@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Presentación interactiva sobre el funcionamiento de una lámpara de Faraday.">
+  <title>Lámpara de Faraday | Presentación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress"><span id="progressBar"></span></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">Φ</span><span>Faraday Lab</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <nav id="nav">
+      <a href="#inicio">Inicio</a><a href="#componentes">Componentes</a><a href="#funcionamiento">Funcionamiento</a><a href="#faraday">Ley de Faraday</a><a href="#circuito">Circuito</a><a href="#resumen">Resumen</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="slide hero" id="inicio">
+      <div class="glow one"></div><div class="glow two"></div>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Electricidad y Magnetismo</span>
+          <h1>Lámpara de <span>Faraday</span></h1>
+          <p class="lead">Un prototipo que transforma el movimiento de dos imanes de neodimio en energía eléctrica, la almacena por un corto tiempo y la utiliza para encender un LED rojo.</p>
+          <div class="actions"><a class="btn primary" href="#funcionamiento">Ver cómo funciona</a><a class="btn ghost" href="#circuito">Ver circuito</a></div>
+          <div class="stats"><article><b>1000</b><small>vueltas</small></article><article><b>4700 µF</b><small>condensador</small></article><article><b>1,8 V</b><small>LED rojo</small></article></div>
+        </div>
+        <div class="device reveal delay">
+          <div class="tube"><div class="magnet"><span>N</span><span>S</span></div><div class="coil"></div></div>
+          <div class="energy"></div>
+          <div class="mini-flow"><span>Movimiento</span><b>→</b><span>Electricidad</span><b>→</b><span>Luz</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="idea">
+      <div class="container two-col">
+        <div class="reveal"><span class="eyebrow">Idea central</span><h2>La energía empieza en el movimiento</h2><p>Cuando agitamos la lámpara, los imanes se desplazan respecto a la bobina. Ese movimiento hace variar el campo magnético que atraviesa sus espiras y aparece una tensión eléctrica en los extremos del alambre.</p><p>Después, los diodos ordenan la polaridad, el condensador almacena parte de la energía y el LED la convierte en luz.</p></div>
+        <div class="flow-card reveal delay">
+          <div class="flow-step"><span>01</span><div><b>Energía mecánica</b><small>Movimiento de la mano</small></div></div><div class="arrow">↓</div>
+          <div class="flow-step"><span>02</span><div><b>Energía eléctrica</b><small>Inducción en la bobina</small></div></div><div class="arrow">↓</div>
+          <div class="flow-step"><span>03</span><div><b>Almacenamiento</b><small>Condensador de 4700 µF</small></div></div><div class="arrow">↓</div>
+          <div class="flow-step"><span>04</span><div><b>Energía luminosa</b><small>LED rojo</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide light" id="componentes"><div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Montaje real</span><h2>Componentes utilizados</h2><p>Los elementos que realmente se usaron en el prototipo.</p></div>
+      <div class="cards">
+        <article class="card reveal"><div class="icon magnet-icon">N S</div><h3>2 imanes de neodimio</h3><p>Crean un campo magnético intenso. Al moverse respecto a la bobina, hacen cambiar el flujo magnético.</p></article>
+        <article class="card reveal"><div class="icon coil-icon">∿</div><h3>Bobina de 1000 vueltas</h3><p>Está hecha con cobre esmaltado calibre 30. En sus terminales aparece el voltaje inducido.</p></article>
+        <article class="card reveal"><div class="icon diode-icon">▶|</div><h3>4 diodos rectificadores</h3><p>Forman un puente rectificador y hacen que el condensador reciba la polaridad correcta.</p></article>
+        <article class="card reveal"><div class="icon cap-icon">||</div><h3>Condensador de 4700 µF</h3><p>Acumula temporalmente parte de los pequeños pulsos de energía producidos al mover los imanes.</p></article>
+        <article class="card reveal"><div class="icon led-icon">●</div><h3>LED rojo de 1,8 V</h3><p>Necesita una tensión relativamente baja, por eso resulta adecuado para este montaje manual.</p></article>
+      </div>
+    </div></section>
+
+    <section class="slide" id="funcionamiento"><div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Paso a paso</span><h2>¿Qué pasa cuando agitamos la lámpara?</h2></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="num">1</div><div><h3>Los imanes se desplazan</h3><p>Los dos imanes pasan por la zona interior de la bobina. Si se quedan quietos, el efecto prácticamente desaparece.</p></div></article>
+        <article class="timeline-item reveal"><div class="num">2</div><div><h3>Cambia el flujo magnético</h3><p>El campo que atraviesa las espiras aumenta y disminuye cuando los imanes se acercan, cruzan y se alejan.</p></div></article>
+        <article class="timeline-item reveal"><div class="num">3</div><div><h3>La bobina genera voltaje</h3><p>Ese cambio produce una fuerza electromotriz. Además, la polaridad cambia según el sentido del movimiento.</p></div></article>
+        <article class="timeline-item reveal"><div class="num">4</div><div><h3>Los cuatro diodos rectifican</h3><p>Dos conducen en un sentido y los otros dos cuando la polaridad se invierte. Así el condensador siempre recibe una polaridad útil.</p></div></article>
+        <article class="timeline-item reveal"><div class="num">5</div><div><h3>El condensador almacena</h3><p>Los pulsos se van acumulando temporalmente y la alimentación del LED se vuelve menos intermitente.</p></div></article>
+        <article class="timeline-item reveal"><div class="num">6</div><div><h3>El LED emite luz</h3><p>Cuando existe suficiente tensión, el LED rojo conduce y convierte parte de la energía eléctrica en energía luminosa.</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="slide dark" id="faraday"><div class="container two-col">
+      <div class="reveal"><span class="eyebrow">Fundamento físico</span><h2>Ley de Faraday</h2><p>La ecuación que resume el principio de funcionamiento es:</p><div class="equation"><span>ε = −N</span><span class="fraction"><b>dΦ</b><i>dt</i></span></div><p class="big-note">En palabras simples: <strong>cuantas más vueltas tenga la bobina y más rápido cambie el flujo magnético, mayor puede ser el voltaje inducido.</strong></p></div>
+      <div class="formula-list reveal delay">
+        <article><span>ε</span><div><b>Voltaje inducido</b><small>La tensión que aparece en la bobina.</small></div></article>
+        <article><span>N</span><div><b>Número de vueltas</b><small>En este prototipo, N = 1000.</small></div></article>
+        <article><span>Φ</span><div><b>Flujo magnético</b><small>Cuánto campo magnético atraviesa la bobina.</small></div></article>
+        <article><span>dΦ/dt</span><div><b>Rapidez del cambio</b><small>Qué tan rápido cambia el flujo con el tiempo.</small></div></article>
+      </div>
+    </div></section>
+
+    <section class="slide light" id="diodos"><div class="container two-col">
+      <div class="reveal"><span class="eyebrow">Puente rectificador</span><h2>¿Por qué cuatro diodos?</h2><p>La bobina no entrega siempre el mismo positivo y negativo. Cuando cambia el sentido del movimiento, también cambia la polaridad.</p><div class="polarity"><div><span>Imán →</span><b>A (+) · B (−)</b></div><div><span>Imán ←</span><b>A (−) · B (+)</b></div></div></div>
+      <div class="panel reveal delay"><h3>El puente corrige ese problema</h3><p>En una dirección conducen dos diodos y, cuando la polaridad se invierte, conducen los otros dos. La salida hacia el condensador conserva el mismo sentido eléctrico.</p><div class="pill-flow"><span>Señal variable</span><b>→</b><span>4 diodos</span><b>→</b><span>Polaridad útil</span></div><div class="tip"><strong>Idea clave:</strong> los diodos no crean energía; simplemente dirigen la corriente para que el condensador pueda cargarse correctamente.</div></div>
+    </div></section>
+
+    <section class="slide" id="condensador"><div class="container two-col">
+      <div class="reveal"><span class="eyebrow">Almacenamiento</span><h2>¿Qué hace el condensador?</h2><p>Funciona como un pequeño depósito eléctrico. Cada pasada del imán produce un pulso y el condensador acumula temporalmente parte de esa energía.</p><div class="equation small">E = ½CV²</div><p>Para <strong>C = 4700 µF = 0,0047 F</strong> y <strong>V = 1,8 V</strong>:</p><div class="calc">E = ½ × 0,0047 × (1,8)² ≈ <strong>0,0076 J</strong></div></div>
+      <div class="charge-demo reveal delay"><div class="battery"><div class="level" id="batteryLevel"></div><span id="batteryText">0%</span></div><button class="btn primary" id="chargeBtn">Agregar pulso de carga</button><p>Esta animación es visual: representa cómo varios pulsos pequeños se van acumulando.</p></div>
+    </div></section>
+
+    <section class="slide dark" id="led"><div class="container two-col">
+      <div class="led-stage reveal"><div class="bulb" id="ledBulb"></div><button class="btn primary" id="toggleLed">Encender LED</button></div>
+      <div class="reveal delay"><span class="eyebrow">Salida luminosa</span><h2>¿Por qué un LED rojo de 1,8 V?</h2><p>El LED rojo requiere una tensión relativamente baja para comenzar a conducir, algo favorable cuando la energía proviene de una bobina accionada manualmente.</p><p>Cuando dispone de suficiente tensión, transforma parte de la energía eléctrica en luz.</p><div class="warning"><strong>Nota del montaje:</strong> en el esquema usado, el LED aparece directamente en paralelo con el condensador. Una versión más protegida normalmente agrega una resistencia en serie con el LED para limitar la corriente.</div></div>
+    </div></section>
+
+    <section class="slide light" id="circuito"><div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Circuito real</span><h2>Esquema utilizado en el prototipo</h2><p>El dibujo muestra la bobina conectada al puente de cuatro diodos, seguido por el condensador y el LED.</p></div>
+      <figure class="diagram reveal"><img src="assets/circuito_original.png" alt="Esquema original del circuito de la lámpara de Faraday"><figcaption>Esquema original utilizado para construir el circuito.</figcaption></figure>
+      <div class="functional reveal"><div><b>Bobina</b><small>genera pulsos</small></div><span>→</span><div><b>4 diodos</b><small>rectifican</small></div><span>→</span><div><b>4700 µF</b><small>almacena</small></div><span>→</span><div><b>LED 1,8 V</b><small>produce luz</small></div></div>
+    </div></section>
+
+    <section class="slide" id="resumen"><div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Para explicar en clase</span><h2>Resumen en seis ideas</h2></div>
+      <div class="summary"><article class="reveal"><span>1</span><p>La mano aporta energía mecánica.</p></article><article class="reveal"><span>2</span><p>Los imanes cambian el flujo magnético.</p></article><article class="reveal"><span>3</span><p>Las 1000 vueltas generan una tensión inducida.</p></article><article class="reveal"><span>4</span><p>Los cuatro diodos rectifican la polaridad.</p></article><article class="reveal"><span>5</span><p>El condensador almacena energía temporalmente.</p></article><article class="reveal"><span>6</span><p>El LED rojo transforma energía eléctrica en luz.</p></article></div>
+      <div class="final reveal"><span>Idea final</span><blockquote>La lámpara demuestra que un cambio de flujo magnético puede producir energía eléctrica aprovechable sin utilizar una batería como fuente principal.</blockquote></div>
+    </div></section>
+  </main>
+
+  <footer><div><b>Lámpara de Faraday</b><span>Presentación web · Electricidad y Magnetismo</span></div><a href="#inicio">Volver arriba ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
